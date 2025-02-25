@@ -1,0 +1,86 @@
+{
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"airbnb-base",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"plugin:sonarjs/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json"
+	},
+	"plugins": ["@typescript-eslint", "prettier", "sonarjs"],
+	"rules": {
+		"no-underscore-dangle": [
+			"error",
+			{
+				"allow": ["_id"]
+			}
+		],
+		"class-methods-use-this": "off",
+		"no-loop-func": "off",
+		"camelcase": "warn",
+		"no-console": "off",
+		"prettier/prettier": ["error", { "endOfLine": "auto" }],
+		"func-names": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"import/prefer-default-export": "off",
+		"no-use-before-define": [
+			"error",
+			{
+				"functions": true,
+				"classes": true
+			}
+		],
+		"@typescript-eslint/no-explicit-any": "off",
+		"no-param-reassign": [
+			2,
+			{
+				"props": false
+			}
+		],
+		"prefer-destructuring": [
+			"error",
+			{
+				"object": true,
+				"array": false
+			}
+		],
+		"no-plusplus": [
+			"error",
+			{
+				"allowForLoopAfterthoughts": true
+			}
+		],
+		"no-prototype-builtins": "off",
+		"no-await-in-loop": "off",
+		"no-empty-interface": "off",
+		"@typescript-eslint/no-empty-interface": "off",
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"],
+		"curly": ["error", "all"],
+		"no-trailing-spaces": "error",
+		"sonarjs/no-small-switch": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
+			}
+		}
+	}
+}

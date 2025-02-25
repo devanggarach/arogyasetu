@@ -1,0 +1,1 @@
+export { demoSmsOtp } from './demoSmsTemplate';
